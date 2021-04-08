@@ -1,0 +1,21 @@
+{
+  "name": "Shelter Buddy - Code Test",
+  "short_name": "Shelter Buddy",
+  "icons": [
+    {
+      "src": "/img/icon-146.png",
+      "type": "image/png",
+      "sizes": "146x132"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x460"
+    }
+  ],
+  "background_color": "##F6F7FA",
+  "description": "This application uses Typescript, React, NextJS e Styled Components!",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "##F6F7FA"
+}
