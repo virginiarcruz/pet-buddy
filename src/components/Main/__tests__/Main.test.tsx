@@ -1,21 +1,23 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
 
 import Main from '../Main'
 
 describe('<Main />', () => {
   it('should render the heading', () => {
-    const { container } = render(<Main />)
+    const { container } = renderWithTheme(<Main />)
 
     expect(
-      screen.getByRole('heading', { name: /Shelter Buddy/i })
+      screen.getByRole('img', { name: /Shelter Buddy logo/i })
     ).toBeInTheDocument()
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 
   it('should render the colors correctly', () => {
-    const { container } = render(<Main />)
-
-    expect(container.firstChild).toHaveStyle({ 'background-color': '#F6F7FA' })
+    renderWithTheme(<Main />)
+    expect(screen.getByTestId('main-container')).toHaveStyle({
+      'background-color': '#F6F7FA'
+    })
   })
 })

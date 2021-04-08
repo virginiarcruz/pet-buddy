@@ -1,14 +1,11 @@
-import { Wrapper, Logo, Title, Description } from './styles'
+import { Container, Content } from './styles'
+import Logo from 'components/Logo'
 
-const Main = ({
-  title = 'Shelter Buddy',
-  description = 'Shelter Management Software, track your animals, volunteers, donors and more'
-}) => (
-  <Wrapper>
-    <Logo src="/img/logo.svg" alt="shelter buddy brand" />
-    <Title>{title}</Title>
-    <Description>{description}</Description>
-  </Wrapper>
+const Main = () => (
+  <Container data-testid="main-container">
+    <Logo />
+    <Content />
+  </Container>
 )
 
 export default Main

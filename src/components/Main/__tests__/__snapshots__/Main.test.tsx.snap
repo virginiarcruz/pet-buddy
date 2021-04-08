@@ -2,11 +2,9 @@
 
 exports[`<Main /> should render the heading 1`] = `
 .c0 {
-  background-color: #f6f7fa;
-  color: #333333;
+  background-color: #F6F7FA;
   width: 100%;
   height: 100%;
-  padding: 3rem;
   text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -19,43 +17,54 @@ exports[`<Main /> should render the heading 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 {
-  width: 25rem;
-  margin-bottom: 2rem;
+  padding: 72px 16px 42px 16px;
 }
 
 .c2 {
-  font-size: 2.5rem;
+  background-color: #FFFFFF;
+  width: 100%;
+  min-height: 200px;
+  border-radius: 12px;
+  margin-top: 56px;
 }
 
-.c3 {
-  font-size: 2rem;
-  font-weight: 400;
+.c1 {
+  width: 206px;
+  height: 32px;
 }
 
-<main
-  class="c0"
->
-  <img
-    alt="shelter buddy brand"
-    class="c1"
-    src="/img/logo.svg"
-  />
-  <h1
-    class="c2"
+@media (min-width:768px) {
+  .c0 {
+    padding: 96px 156px 90px 156px;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    margin-top: 96px;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    width: 283px;
+    height: 44px;
+  }
+}
+
+<div>
+  <main
+    class="c0"
+    data-testid="main-container"
   >
-    Shelter Buddy
-  </h1>
-  <h2
-    class="c3"
-  >
-    Shelter Management Software, track your animals, volunteers, donors and more
-  </h2>
-</main>
-`;
+    <img
+      alt="Shelter Buddy logo"
+      class="c1"
+      src="/img/logo.svg"
+    />
+    <section
+      class="c2"
+    />
+  </main>
+</div>
+`
