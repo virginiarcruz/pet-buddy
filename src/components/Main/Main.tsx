@@ -1,14 +1,14 @@
-import * as S from './styles'
+import { Wrapper, Logo, Title, Description } from './styles'
 
 const Main = ({
   title = 'Shelter Buddy',
   description = 'Shelter Management Software, track your animals, volunteers, donors and more'
 }) => (
-  <S.Wrapper>
-    <S.Logo src="/img/logo.svg" alt="shelter buddy brand" />
-    <S.Title>{title}</S.Title>
-    <S.Description>{description}</S.Description>
-  </S.Wrapper>
+  <Wrapper>
+    <Logo src="/img/logo.svg" alt="shelter buddy brand" />
+    <Title>{title}</Title>
+    <Description>{description}</Description>
+  </Wrapper>
 )
 
 export default Main
