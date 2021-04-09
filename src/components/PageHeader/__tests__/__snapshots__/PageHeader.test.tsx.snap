@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageHeader /> should render the <PageHeader /> 1`] = `
+.c3 {
+  border-radius: 100px;
+  background-color: #F47500;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 4px 8px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 25px;
+  line-height: 17px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  color: #000121;
+  font-family: 'Inter',-apple-system,sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 8px;
+  line-height: 27px;
+}
+
+.c4 {
+  padding: 12px;
+  background-color: #F4F4F7;
+  border-radius: 12px;
+  border: 0;
+  font-size: 16px;
+  font-family: 'Inter',-apple-system,sans-serif;
+  color: #A1A2AF;
+  line-height: 19px;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #A1A2AF;
+}
+
+.c4::-moz-placeholder {
+  color: #A1A2AF;
+}
+
+.c4:-ms-input-placeholder {
+  color: #A1A2AF;
+}
+
+.c4::placeholder {
+  color: #A1A2AF;
+}
+
+.c0 > input {
+  margin-top: 32px;
+}
+
+@media (min-width:768px) {
+  .c4 {
+    width: 310px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .c0 > input {
+    margin-top: 0;
+  }
+}
+
+<header
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <h1
+      class="c2"
+    >
+      Your Animals
+    </h1>
+    <span
+      class="c3"
+    >
+      28
+    </span>
+  </div>
+  <input
+    class="c4"
+    placeholder="Search an animal by name"
+    type="text"
+  />
+</header>
+`

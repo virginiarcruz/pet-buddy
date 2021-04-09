@@ -1,11 +1,12 @@
+import React from 'react'
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import Main from '../Main'
+import Home from '../Home'
 
-describe('<Main />', () => {
+describe('<Home />', () => {
   it('should render the heading', () => {
-    const { container } = renderWithTheme(<Main />)
+    const { container } = renderWithTheme(<Home />)
 
     expect(
       screen.getByRole('img', { name: /Shelter Buddy logo/i })
@@ -15,8 +16,8 @@ describe('<Main />', () => {
   })
 
   it('should render the colors correctly', () => {
-    renderWithTheme(<Main />)
-    expect(screen.getByTestId('main-container')).toHaveStyle({
+    renderWithTheme(<Home />)
+    expect(screen.getByTestId('home-container')).toHaveStyle({
       'background-color': '#F6F7FA'
     })
   })

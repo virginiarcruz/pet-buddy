@@ -1,3 +1,4 @@
+import React from 'react'
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
@@ -7,7 +8,6 @@ describe('<Heading />', () => {
   it('should render the heading with badge', () => {
     renderWithTheme(<Heading title="heading" labelBadge="badge" />)
 
-    expect(screen.getByRole('banner')).toBeTruthy()
     expect(
       screen.getByRole('heading', { name: /heading/i })
     ).toBeInTheDocument()

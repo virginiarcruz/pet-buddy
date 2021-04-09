@@ -23,8 +23,18 @@ export const Content = styled.section`
     min-height: 200px;
     border-radius: ${border.radius.medium};
     margin-top: 56px;
+    padding: 32px 24px;
     ${media.greaterThan('medium')`
+      padding: 40px 40px 32px 40px;
       margin-top: 96px;
     `}
+  `}
+`
+
+export const ContentGrid = styled.div`
+  ${media.greaterThan('medium')`
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 56px;
   `}
 `

@@ -9,6 +9,7 @@ export const BadgeContainer = styled.span`
     font-size: ${font.size.small};
     padding: 4px 8px;
     width: max-content;
+    height: 25px;
     line-height: 17px;
   `}
 `
