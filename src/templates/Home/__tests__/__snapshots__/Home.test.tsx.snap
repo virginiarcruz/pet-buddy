@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should render the heading 1`] = `
+.c1 {
+  width: 206px;
+  height: 32px;
+}
+
+.c0 {
+  background-color: #F6F7FA;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 72px 16px 42px 16px;
+}
+
+.c2 {
+  background-color: #FFFFFF;
+  width: 100%;
+  min-height: 200px;
+  border-radius: 12px;
+  margin-top: 56px;
+  padding: 32px 24px;
+}
+
+.c6 {
+  border-radius: 100px;
+  background-color: #F47500;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 4px 8px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 25px;
+  line-height: 17px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  color: #000121;
+  font-family: 'Inter',-apple-system,sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 8px;
+  line-height: 27px;
+}
+
+.c7 {
+  padding: 12px;
+  background-color: #F4F4F7;
+  border-radius: 12px;
+  border: 0;
+  font-size: 16px;
+  font-family: 'Inter',-apple-system,sans-serif;
+  color: #A1A2AF;
+  line-height: 19px;
+}
+
+.c7::-webkit-input-placeholder {
+  color: #A1A2AF;
+}
+
+.c7::-moz-placeholder {
+  color: #A1A2AF;
+}
+
+.c7:-ms-input-placeholder {
+  color: #A1A2AF;
+}
+
+.c7::placeholder {
+  color: #A1A2AF;
+}
+
+.c3 > input {
+  margin-top: 32px;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    width: 283px;
+    height: 44px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    padding: 96px 156px 90px 156px;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    padding: 40px 40px 32px 40px;
+    margin-top: 96px;
+  }
+}
+
+@media (min-width:768px) {
+  .c8 {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin-top: 56px;
+  }
+}
+
+@media (min-width:768px) {
+  .c7 {
+    width: 310px;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .c3 > input {
+    margin-top: 0;
+  }
+}
+
+<div>
+  <main
+    class="c0"
+    data-testid="home-container"
+  >
+    <img
+      alt="Shelter Buddy logo"
+      class="c1"
+      src="/img/logo.svg"
+    />
+    <section
+      class="c2"
+    >
+      <header
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <h1
+            class="c5"
+          >
+            Your Animals
+          </h1>
+          <span
+            class="c6"
+          >
+            28
+          </span>
+        </div>
+        <input
+          class="c7"
+          placeholder="Search an animal by name"
+          type="text"
+        />
+      </header>
+      <div
+        class="c8"
+      >
+        <p>
+           Name 
+        </p>
+        <p>
+           Name2 
+        </p>
+        <p>
+           Name3 
+        </p>
+        <p>
+           Name4 
+        </p>
+        <p>
+           Name5 
+        </p>
+        <p>
+           Name6 
+        </p>
+        <p>
+           Name7 
+        </p>
+      </div>
+    </section>
+  </main>
+</div>
+`;
