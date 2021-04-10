@@ -5,6 +5,7 @@ export default {
   },
   border: {
     radius: {
+      small: '8px',
       medium: '12px',
       pill: '100px'
     }
@@ -25,9 +26,10 @@ export default {
     mainBg: '#F6F7FA',
     black: '#000121',
     darkGray: '#707183',
+    lightGray: '#F4F4F7',
     blue: '#002FD6',
     orange: '#F47500',
-    middleGray: '##A1A2AF',
+    middleGray: '#A1A2AF',
     white: '#FFFFFF',
     softBlue: '#E0E7FD'
   },
