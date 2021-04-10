@@ -22,4 +22,4 @@ exports[`<Badge /> should render the badge 1`] = `
     badge
   </span>
 </div>
-`
+`;
