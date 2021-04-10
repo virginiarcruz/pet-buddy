@@ -1,7 +1,10 @@
-import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
+import React, {
+  SyntheticEvent,
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes
+} from 'react'
 
-import Link from 'next/link'
-import { Container, Pages, Page } from './styles'
+import { Page } from './styles'
 
 type LinkTypes =
   | AnchorHTMLAttributes<HTMLAnchorElement>
@@ -11,25 +14,24 @@ export type PaginationProps = {
   isActive?: boolean
   pageLink?: string | undefined
   pageLabel?: string
+  href?: string
+  onClick?: (e: SyntheticEvent) => void
 } & LinkTypes
 
-type PagesProps = {
-  pages?: PaginationProps[]
-}
-
-export const Pagination = ({ pages }: PagesProps) => {
-  console.log('pages', pages)
+const Pagination = ({
+  isActive = false,
+  onClick,
+  href,
+  pageLabel,
+  ...props
+}: PaginationProps) => {
   return (
-    <Container>
-      <Pages>
-        {pages?.map(({ isActive = false, pageLabel, pageLink, ...props }) => (
-          <Page key={pageLabel}>
-            <Link href={pageLink} passHref {...props}>
-              <a isActive={isActive}>{pageLabel}</a>
-            </Link>
-          </Page>
-        ))}
-      </Pages>
-    </Container>
+    <Page isActive={isActive}>
+      <a href={href} onClick={onClick} {...props}>
+        {pageLabel}
+      </a>
+    </Page>
   )
 }
+
+export default Pagination

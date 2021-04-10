@@ -1,7 +1,7 @@
-import React from 'react'
 import Logo from 'components/Logo'
+import GridRow from 'components/GridRow'
 
-import { Container, Content, ContentGrid } from './styles'
+import { Container, Content, ContentGrid, Column, TitleColumn } from './styles'
 import PageHeader from 'components/PageHeader'
 
 const Home = () => (
@@ -10,14 +10,15 @@ const Home = () => (
     <Content>
       <PageHeader />
       <ContentGrid>
-        <p> </p>
-        <p> Name </p>
-        <p> Type </p>
-        <p> Breed </p>
-        <p> Gender </p>
-        <p> Color </p>
-        <p> </p>
+        <Column />
+        <TitleColumn> Name </TitleColumn>
+        <TitleColumn>Type</TitleColumn>
+        <TitleColumn> Breed </TitleColumn>
+        <TitleColumn> Gender </TitleColumn>
+        <TitleColumn> Color </TitleColumn>
+        <Column />
       </ContentGrid>
+      <GridRow />
     </Content>
   </Container>
 )
