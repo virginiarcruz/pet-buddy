@@ -8,27 +8,24 @@ import { Pagination } from 'components/Pagination'
 
 import MediaMatch from 'components/MediaMatch'
 import Card from 'components/Card'
+import PageHeader from 'components/PageHeader'
 
 const GridRow = () => {
   const context = useContext(AppContext)
   const { profile } = context
   const [current, setCurrent] = useState(0)
 
-  console.log('data context', context.profile)
+  console.log('profile', context.profile)
 
-  const [items, setItems] = useState()
   const [searchTerm, setSearchTerm] = useState('')
   const [searchResults, setSearchResults] = useState()
 
   useEffect(() => {
-    setItems(profile)
-  }, [profile, items])
-
-  useEffect(() => {
-    console.log('items', items)
-    const results = items?.filter((item) => item?.Name?.includes(searchTerm))
+    const results = profile?.filter((item) =>
+      item.Name?.toLowerCase().includes(searchTerm)
+    )
     setSearchResults(results)
-  }, [searchTerm, items])
+  }, [profile, searchTerm])
 
   function paginate(arr, size) {
     return arr?.reduce((acc, val, i) => {
@@ -47,12 +44,17 @@ const GridRow = () => {
     setCurrent(e.target.outerText - 1)
   }
 
-  // const handleChange = (event) => {
-  //   setSearchTerm(event.target.value)
-  // }
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value)
+  }
 
   return (
     <>
+      <PageHeader
+        inputValue={searchTerm}
+        onChange={handleChange}
+        labelBadge={profile?.length}
+      />
       <ListContainer className="petsList">
         <MediaMatch greaterThan="medium">
           {pages?.[`${current}`]?.map((pet, i) => (

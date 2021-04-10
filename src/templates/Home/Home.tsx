@@ -31,11 +31,11 @@ const Home = () => {
     <Container data-testid="home-container">
       <Logo />
       <Content>
-        <PageHeader
+        {/* <PageHeader
           inputValue={searchTerm}
           onChange={handleChange}
           labelBadge={profile?.length}
-        />
+        /> */}
         <MediaMatch greaterThan="medium">
           <ContentGrid>
             <Column />
