@@ -18,5 +18,5 @@ export default {
 } as Meta
 
 export const Default: Story<PaginationProps> = (args) => (
-  <Pagination {...args} />
+  <Pagination pageLabel="1" {...args} />
 )

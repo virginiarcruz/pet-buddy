@@ -7,6 +7,7 @@ export const Grid = styled.div`
 
   ${media.greaterThan('medium')`
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: 70px 1fr 1fr 1.5fr 1fr 1.5fr 65px;
+      grid-gap: 10px;
   `}
 `

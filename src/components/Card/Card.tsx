@@ -10,6 +10,7 @@ export type CardProps = {
   petBreed?: string
   petGender?: string
   petColor?: string
+  idCard: string
 }
 
 const Card = ({
@@ -17,11 +18,13 @@ const Card = ({
   petType,
   petBreed,
   petColor,
-  petGender
+  petGender,
+  idCard,
+  ...props
 }: CardProps) => (
-  <CardContainer>
-    <Input type="checkbox" id="collapsible" name="header-card" />
-    <Header htmlFor="collapsible">
+  <CardContainer className="card-container">
+    <Input type="checkbox" id={idCard} name="header-card" {...props} />
+    <Header htmlFor={idCard} {...props}>
       <Avatar imageAlt="alt img" imageSrc="https://picsum.photos/50" />
       <Name> {petName} </Name>
       <IconButton />

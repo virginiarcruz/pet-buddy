@@ -32,6 +32,7 @@ export const Content = styled.section`
 `
 
 export const ContentGrid = styled(Grid)`
+  padding: 0 16px;
   ${media.greaterThan('medium')`
     margin-top: 56px;
   `}

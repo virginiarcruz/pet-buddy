@@ -6,4 +6,4 @@ export default {
   component: PageHeader
 } as Meta
 
-export const Default: Story = () => <PageHeader />
+export const Default: Story = (args) => <PageHeader labelBadge="28" {...args} />

@@ -1,6 +1,14 @@
 import styled, { css } from 'styled-components'
 import { Grid } from 'components/Grid'
 
+export const ListContainer = styled.div`
+  .card-container {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+`
+
 export const Row = styled(Grid)`
   ${({ theme }) => css`
     background-color: ${theme.color.lighterGray};

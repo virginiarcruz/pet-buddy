@@ -1,27 +1,28 @@
-import React, { useState, useEffect } from 'react'
-import { Row, PaginationContainer } from './styles'
+import React, { useState, useEffect, useContext } from 'react'
+import { Row, PaginationContainer, ListContainer } from './styles'
 import Avatar from 'components/Avatar'
 import Button from 'components/Button'
+import AppContext from 'context/AppContext'
 
-import { useFetch } from 'hooks/useFetch'
 import { Pagination } from 'components/Pagination'
-import PageHeader from 'components/PageHeader'
 
 import MediaMatch from 'components/MediaMatch'
 import Card from 'components/Card'
 
 const GridRow = () => {
-  const data = useFetch()
+  const context = useContext(AppContext)
+  const { profile } = context
   const [current, setCurrent] = useState(0)
-  const { Data: allPets } = data
+
+  console.log('data context', context.profile)
 
   const [items, setItems] = useState()
   const [searchTerm, setSearchTerm] = useState('')
   const [searchResults, setSearchResults] = useState()
 
   useEffect(() => {
-    setItems(allPets)
-  }, [allPets, items])
+    setItems(profile)
+  }, [profile, items])
 
   useEffect(() => {
     console.log('items', items)
@@ -52,11 +53,10 @@ const GridRow = () => {
 
   return (
     <>
-      {/* <PageHeader inputValue={searchTerm} onChange={handleChange} /> */}
-      <div className="petsList">
+      <ListContainer className="petsList">
         <MediaMatch greaterThan="medium">
-          {pages?.[`${current}`]?.map((pet) => (
-            <Row key={pet.id}>
+          {pages?.[`${current}`]?.map((pet, i) => (
+            <Row key={`pet-${i}`}>
               <Avatar imageAlt={pet.name} imageSrc="https://picsum.photos/50" />
               <p> {pet.Name ? pet.Name : 'no name'} </p>
               <p> {pet.Type?.Name} </p>
@@ -70,9 +70,10 @@ const GridRow = () => {
           ))}
         </MediaMatch>
         <MediaMatch lessThan="medium">
-          {pages?.[`${current}`]?.map((pet) => (
+          {pages?.[`${current}`]?.map((pet, i) => (
             <Card
-              key={pet.id}
+              key={`pet-${i}`}
+              idCard={`card-${i}`}
               petName={pet.Name ? pet.Name : 'no name'}
               petType={pet.Type?.Name}
               petBreed={pet.Breed?.Primary?.Name}
@@ -81,7 +82,7 @@ const GridRow = () => {
             />
           ))}
         </MediaMatch>
-      </div>
+      </ListContainer>
       <PaginationContainer>
         {pages?.map((_, i) => {
           return (

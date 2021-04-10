@@ -24,6 +24,9 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Inter', -apple-system,  sans-serif;
     font-size: 16px;
   }
+  :focus {
+    outline: none
+  }
 `
 
 export default GlobalStyles

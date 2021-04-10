@@ -40,17 +40,16 @@ export const CardContent = styled.div`
       font-size: ${theme.font.size.medium};
       font-weight: ${theme.font.medium};
       line-height: 19px;
+      text-align: left;
     }
     p {
       color: ${theme.color.darkGray};
       margin-right: 9px;
-      &:not(:last-child){
-        margin-bottom: 16px;
-      }
+      margin-bottom: 16px;
       &:first-child {
         margin-top: 24px;
       }
-      &:last-child {
+      &:nth-child(4) {
         margin-bottom: 24px;
       }
       span {

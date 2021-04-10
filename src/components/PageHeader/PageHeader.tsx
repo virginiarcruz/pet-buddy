@@ -6,7 +6,7 @@ import { Header } from './styles'
 
 const PageHeader = ({ ...props }) => (
   <Header>
-    <Heading title="Your Animals" labelBadge="28" />
+    <Heading title="Your Animals" {...props} />
     <Input id="inputFilter" placeholder="Search an animal by name" {...props} />
   </Header>
 )
