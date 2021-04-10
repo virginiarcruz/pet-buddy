@@ -1,22 +1,16 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import { PaginationProps } from './Pagination'
 
 export type PaginationStyleProps = {
   isActive: boolean
-}
-
-const paginationModifiers = {
-  active: () => css`
-    background-color: red;
-  `
-}
+} & PaginationProps
 
 export const Container = styled.div``
 export const Pages = styled.ul`
   list-style: none;
   display: flex;
 `
-export const Page = styled.li<PaginationStyleProps | PaginationProps>`
+export const Page = styled.span<PaginationStyleProps>`
   ${({ theme, isActive }) => css`
     &:not(:first-child) {
       margin-left: 8px;
@@ -35,7 +29,10 @@ export const Page = styled.li<PaginationStyleProps | PaginationProps>`
       justify-content: center;
       text-decoration: none;
 
-      ${!!isActive && paginationModifiers.active()};
+      ${!!isActive &&
+      `background-color: ${theme?.color?.blue};
+       color: ${theme?.color?.white};
+       `};
 
       &:hover {
         background-color: ${theme.color.blue};

@@ -3,6 +3,7 @@ import Logo from 'components/Logo'
 
 import { Container, Content, ContentGrid } from './styles'
 import PageHeader from 'components/PageHeader'
+import GridRow from 'components/GridRow/GridRow'
 
 const Home = () => (
   <Container data-testid="home-container">
@@ -19,6 +20,7 @@ const Home = () => (
         <p> </p>
       </ContentGrid>
     </Content>
+    <GridRow />
   </Container>
 )
 
