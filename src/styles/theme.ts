@@ -27,6 +27,7 @@ export default {
     black: '#000121',
     darkGray: '#707183',
     lightGray: '#F4F4F7',
+    lighterGray: '#F8F8FC',
     blue: '#002FD6',
     orange: '#F47500',
     middleGray: '#A1A2AF',

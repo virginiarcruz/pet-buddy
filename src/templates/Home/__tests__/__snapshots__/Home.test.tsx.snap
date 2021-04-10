@@ -190,28 +190,28 @@ exports[`<Home /> should render the heading 1`] = `
         class="c8"
       >
         <p>
-           Name 
+
         </p>
         <p>
-           Name2 
+           Name
         </p>
         <p>
-           Name3 
+           Type
         </p>
         <p>
-           Name4 
+           Breed
         </p>
         <p>
-           Name5 
+           Gender
         </p>
         <p>
-           Name6 
+           Color
         </p>
         <p>
-           Name7 
+
         </p>
       </div>
     </section>
   </main>
 </div>
-`;
+`
