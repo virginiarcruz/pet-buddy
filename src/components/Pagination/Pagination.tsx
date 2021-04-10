@@ -18,7 +18,7 @@ export type PaginationProps = {
   onClick?: (e: SyntheticEvent) => void
 } & LinkTypes
 
-const Pagination = ({
+export const Pagination = ({
   isActive = false,
   onClick,
   href,
@@ -33,5 +33,3 @@ const Pagination = ({
     </Page>
   )
 }
-
-export default Pagination

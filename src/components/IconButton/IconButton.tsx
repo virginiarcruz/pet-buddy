@@ -1,9 +1,9 @@
-import { Container, Icon } from './styles'
+import { IconButtonContainer, Icon } from './styles'
 
 const IconButton = ({ ...props }) => (
-  <Container {...props}>
+  <IconButtonContainer className="icon-button" {...props}>
     <Icon />
-  </Container>
+  </IconButtonContainer>
 )
 
 export default IconButton

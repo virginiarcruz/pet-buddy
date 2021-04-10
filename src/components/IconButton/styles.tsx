@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import ArrowIcon from '../Button/assets/arrow.svg'
 
-export const Container = styled.div`
+export const IconButtonContainer = styled.div`
   ${({ theme }) => css`
     border-radius: ${theme.border.radius.pill};
     background-color: ${theme.color.blue};

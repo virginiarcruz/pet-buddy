@@ -4,10 +4,10 @@ import Input from 'components/Input'
 
 import { Header } from './styles'
 
-const PageHeader = () => (
+const PageHeader = ({ ...props }) => (
   <Header>
     <Heading title="Your Animals" labelBadge="28" />
-    <Input placeholder="Search an animal by name" />
+    <Input id="inputFilter" placeholder="Search an animal by name" {...props} />
   </Header>
 )
 
