@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
+import { Grid } from 'components/Grid'
 
 export const Container = styled.main`
   ${({ theme: { color } }) => css`
     background-color: ${color.mainBg};
     width: 100%;
-    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -23,8 +23,28 @@ export const Content = styled.section`
     min-height: 200px;
     border-radius: ${border.radius.medium};
     margin-top: 56px;
+    padding: 32px 24px;
     ${media.greaterThan('medium')`
+      padding: 40px 40px 32px 40px;
       margin-top: 96px;
     `}
+  `}
+`
+
+export const ContentGrid = styled(Grid)`
+  ${media.greaterThan('medium')`
+    margin-top: 56px;
+  `}
+`
+
+export const Column = styled.div``
+export const TitleColumn = styled.h2`
+  ${({ theme }) => css`
+    font-size: ${theme.font.size.medium};
+    font-weight: ${theme.font.medium};
+    color: ${theme.color.darkGray};
+    line-height: 19px;
+    padding-bottom: 24px;
+    text-align: left;
   `}
 `
