@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import 'jest-styled-components'
 
-import MediaMatch from '.'
+import MediaMatch from '../'
 
 describe('<MediaMatch />', () => {
   let desktopHeading: Element
@@ -30,11 +30,11 @@ describe('<MediaMatch />', () => {
 
   it('should show or hide based on the media passed', () => {
     expect(desktopHeading.parentElement).toHaveStyleRule('display', 'block', {
-      media: '(min-width: 768px)'
+      media: '(min-width: 992px)'
     })
 
     expect(mobileHeading.parentElement).toHaveStyleRule('display', 'block', {
-      media: '(max-width: 768px)'
+      media: '(max-width: 992px)'
     })
   })
 })

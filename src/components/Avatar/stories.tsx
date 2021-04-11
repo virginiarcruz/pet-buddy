@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import Avatar from '.'
+import { Avatar } from './Avatar'
 
 export default {
   title: 'Avatar',

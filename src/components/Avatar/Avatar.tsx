@@ -1,12 +1,10 @@
 import { Image } from './styles'
 
 export type AvatarProps = {
-  imageSrc: string
+  imageSrc: string | undefined
   imageAlt: string
 }
 
-const Avatar = ({ imageSrc, imageAlt }: AvatarProps) => (
+export const Avatar = ({ imageSrc, imageAlt }: AvatarProps) => (
   <Image src={imageSrc} alt={imageAlt} />
 )
-
-export default Avatar

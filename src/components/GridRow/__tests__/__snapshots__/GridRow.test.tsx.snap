@@ -1,6 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GridRow /> should render the <GridRow /> 1`] = `
+exports[`<GridRow /> should render the content 1`] = `
+.c5 {
+  display: none;
+}
+
+.c10 {
+  display: none;
+}
+
+.c6 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.c9 .card-container:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.c8 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #707183;
+  line-height: 19px;
+  padding-bottom: 24px;
+  text-align: left;
+}
+
+.c7 {
+  padding: 0 16px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 32px;
+  overflow: scroll;
+}
+
 .c3 {
   border-radius: 100px;
   background-color: #F47500;
@@ -71,23 +110,35 @@ exports[`<GridRow /> should render the <GridRow /> 1`] = `
 }
 
 @media (min-width:992px) {
-
+  .c5 {
+    display: block;
+  }
 }
 
 @media (max-width:992px) {
-
+  .c10 {
+    display: block;
+  }
 }
 
 @media (min-width:992px) {
-
+  .c6 {
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr 1.8fr 0.8fr 1.5fr 65px;
+    grid-gap: 10px;
+  }
 }
 
 @media (min-width:992px) {
-
+  .c7 {
+    margin-top: 56px;
+  }
 }
 
 @media (min-width:992px) {
-
+  .c11 {
+    overflow: hidden;
+  }
 }
 
 @media (min-width:992px) {
@@ -118,27 +169,83 @@ exports[`<GridRow /> should render the <GridRow /> 1`] = `
   }
 }
 
-<header
-  class="c0"
->
-  <div
-    class="c1"
+<div>
+  <header
+    class="c0"
   >
-    <h1
-      class="c2"
+    <div
+      class="c1"
     >
-      Your Animals
-    </h1>
-    <span
-      class="c3"
+      <h1
+        class="c2"
+      >
+        Your Animals
+      </h1>
+      <span
+        class="c3"
+      />
+    </div>
+    <input
+      class="c4"
+      id="inputFilter"
+      placeholder="Search an animal by name"
+      type="text"
+      value=""
+    />
+  </header>
+  <div
+    class="c5"
+  >
+    <div
+      class="c6 c7"
+      data-testid="header-desktop"
+    >
+      <div
+        class=""
+      />
+      <h2
+        class="c8"
+      >
+         Name 
+      </h2>
+      <h2
+        class="c8"
+      >
+        Type
+      </h2>
+      <h2
+        class="c8"
+      >
+         Breed 
+      </h2>
+      <h2
+        class="c8"
+      >
+         Gender 
+      </h2>
+      <h2
+        class="c8"
+      >
+         Color 
+      </h2>
+      <div
+        class=""
+      />
+    </div>
+  </div>
+  <div
+    class="c9 petsList"
+  >
+    <div
+      class="c5"
+    />
+    <div
+      class="c10"
     />
   </div>
-  <input
-    class="c4"
-    id="inputFilter"
-    placeholder="Search an animal by name"
-    type="text"
-    value=""
+  <div
+    class="c11"
+    data-testid="pagination"
   />
-</header>
-`;
+</div>
+`

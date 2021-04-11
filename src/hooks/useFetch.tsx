@@ -5,7 +5,7 @@ export function useFetch() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('data/AnimalList.json?page=2&limit=10')
+      const response = await fetch('data/AnimalList.json')
       const data = await response.json()
       setData(data)
     }

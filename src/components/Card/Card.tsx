@@ -1,21 +1,19 @@
 import React from 'react'
 import { CardContainer, Header, CardContent, Name, Input } from './styles'
-import Avatar from 'components/Avatar'
+import { Avatar, AvatarProps } from 'components/Avatar'
 import Button from 'components/Button'
 import IconButton from 'components/IconButton'
 
 export type CardProps = {
-  petImg?: string
   petName?: string
   petType?: string
   petBreed?: string
   petGender?: string
   petColor?: string
   idCard: string
-}
+} & AvatarProps
 
 const Card = ({
-  petImg,
   petName,
   petType,
   petBreed,
@@ -27,7 +25,7 @@ const Card = ({
   <CardContainer className="card-container">
     <Input type="checkbox" id={idCard} name="header-card" {...props} />
     <Header htmlFor={idCard} {...props}>
-      <Avatar imageAlt="alt img" imageSrc={petImg} />
+      <Avatar {...props} />
       <Name> {petName} </Name>
       <IconButton />
     </Header>

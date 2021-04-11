@@ -168,71 +168,37 @@ exports[`<Card /> should render the <Card /> 1`] = `
   }
 }
 
-<section
-  class="c0 card-container"
->
-  <input
-    class="c1"
-    name="header-card"
-    type="checkbox"
-  />
-  <label
-    class="c2"
+<div>
+  <section
+    class="c0 card-container"
   >
-    <img
-      alt="alt img"
-      class="c3"
+    <input
+      class="c1"
+      id="idCard"
+      name="header-card"
+      type="checkbox"
     />
-    <h2
-      class="c4"
+    <label
+      class="c2"
+      for="idCard"
     >
-       
-       
-    </h2>
-    <div
-      class="c5 icon-button"
-    >
-      <svg
-        class="c6"
-        viewBox="0 0 7 12"
-        xmlns="http://www.w3.org/2000/svg"
+      <img
+        alt="description image"
+        class="c3"
+        src="https://picsum.photos/50"
+      />
+      <h2
+        class="c4"
       >
-        <path
-          d="M6.821 6.454a.665.665 0 0 0 0-.908L1.687.186c-.264-.248-.661-.248-.9 0L.18.818c-.239.247-.239.66 0 .935l4.075 4.233L.18 10.247c-.239.275-.239.688 0 .935l.608.632c.239.248.636.248.9 0l5.134-5.36z"
-        />
-      </svg>
-    </div>
-  </label>
-  <div
-    class="c7 card-content"
-  >
-    <div
-      class="card-inner"
-    >
-      <p>
-        Type: 
-        <span />
-      </p>
-      <p>
-        Breed: 
-        <span />
-      </p>
-      <p>
-        Gender: 
-        <span />
-      </p>
-      <p>
-        Color: 
-        <span />
-      </p>
-      <button
-        class="c8"
+         
+        Summer
+         
+      </h2>
+      <div
+        class="c5 icon-button"
       >
-        <span>
-          Details
-        </span>
         <svg
-          class="c9"
+          class="c6"
           viewBox="0 0 7 12"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -240,8 +206,56 @@ exports[`<Card /> should render the <Card /> 1`] = `
             d="M6.821 6.454a.665.665 0 0 0 0-.908L1.687.186c-.264-.248-.661-.248-.9 0L.18.818c-.239.247-.239.66 0 .935l4.075 4.233L.18 10.247c-.239.275-.239.688 0 .935l.608.632c.239.248.636.248.9 0l5.134-5.36z"
           />
         </svg>
-      </button>
+      </div>
+    </label>
+    <div
+      class="c7 card-content"
+    >
+      <div
+        class="card-inner"
+      >
+        <p>
+          Type: 
+          <span>
+            Dog
+          </span>
+        </p>
+        <p>
+          Breed: 
+          <span>
+            Abyssinian
+          </span>
+        </p>
+        <p>
+          Gender: 
+          <span>
+            Female
+          </span>
+        </p>
+        <p>
+          Color: 
+          <span>
+            Black
+          </span>
+        </p>
+        <button
+          class="c8"
+        >
+          <span>
+            Details
+          </span>
+          <svg
+            class="c9"
+            viewBox="0 0 7 12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.821 6.454a.665.665 0 0 0 0-.908L1.687.186c-.264-.248-.661-.248-.9 0L.18.818c-.239.247-.239.66 0 .935l4.075 4.233L.18 10.247c-.239.275-.239.688 0 .935l.608.632c.239.248.636.248.9 0l5.134-5.36z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
-  </div>
-</section>
-`;
+  </section>
+</div>
+`

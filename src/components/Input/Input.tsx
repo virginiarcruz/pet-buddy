@@ -4,7 +4,7 @@ import { InputContainer } from './styles'
 export type InputProps = {
   placeholder: string
   id?: string
-  inputValue?: any
+  inputValue?: unknown
 }
 
 const Input = ({ placeholder, id, inputValue, ...props }: InputProps) => (

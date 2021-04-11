@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 import 'jest-styled-components'
 
-import Avatar from '../Avatar'
+import { Avatar } from '../Avatar'
 
 describe('<Avatar />', () => {
   it('should render the <Avatar />', () => {

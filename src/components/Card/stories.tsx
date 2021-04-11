@@ -13,4 +13,11 @@ export default {
   }
 } as Meta
 
-export const Default: Story = (args) => <Card idCard="id" {...args} />
+export const Default: Story = (args) => (
+  <Card
+    imageAlt="description image"
+    imageSrc="https://picsum.photos/50"
+    idCard="id"
+    {...args}
+  />
+)

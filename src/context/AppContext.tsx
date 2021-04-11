@@ -1,19 +1,23 @@
 import React, { createContext, useState } from 'react'
 
-type PetProfile = {
+type IPetProfile = {
   id: string
-  name: string
+  Name: string
   type: string
   breed: string
   genere: string
   features: string
 }
+
+type IData = {
+  Data: IPetProfile[]
+}
 export type AppContextInterface = {
   configValue: {
-    data?: void
+    data?: unknown
   }
-  profile?: PetProfile[]
-  setProfile?: PetProfile[]
+  profile?: IPetProfile[]
+  setProfile?: IData
 }
 
 const AppContext = createContext<AppContextInterface>({} as AppContextInterface)

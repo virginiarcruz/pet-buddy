@@ -1,19 +1,13 @@
-import React, {
-  SyntheticEvent,
-  AnchorHTMLAttributes,
-  ButtonHTMLAttributes
-} from 'react'
+import React, { SyntheticEvent, AnchorHTMLAttributes } from 'react'
 
 import { Page } from './styles'
 
-type LinkTypes =
-  | AnchorHTMLAttributes<HTMLAnchorElement>
-  | ButtonHTMLAttributes<HTMLButtonElement>
+type LinkTypes = AnchorHTMLAttributes<HTMLAnchorElement>
 
 export type PaginationProps = {
   isActive?: boolean
   pageLink?: string | undefined
-  pageLabel?: string
+  pageLabel?: string | number
   href?: string
   onClick?: (e: SyntheticEvent) => void
 } & LinkTypes

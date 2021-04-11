@@ -1,18 +1,23 @@
 import styled, { css } from 'styled-components'
-import { generateMedia, DefaultBreakpoints } from 'styled-media-query'
+import { generateMedia } from 'styled-media-query'
+
+export type CustoMediaProps = {
+  desktop?: string
+  tablet?: string
+  mobile?: string
+}
+type breakpoint = keyof CustoMediaProps
+
+export type MediaMatchProps = {
+  lessThan?: breakpoint
+  greaterThan?: breakpoint
+}
 
 export const customMedia = generateMedia({
   desktop: '1170px',
   tablet: '992px',
   mobile: '768px'
 })
-
-type breakpoint = keyof DefaultBreakpoints
-
-export type MediaMatchProps = {
-  lessThan?: breakpoint
-  greaterThan?: breakpoint
-}
 
 const mediaMatchModifiers = {
   lessThan: (size: breakpoint) => css`

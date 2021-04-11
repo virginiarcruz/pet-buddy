@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext, ProfilerProps } from 'react'
 import {
   Row,
   PaginationContainer,
@@ -7,7 +7,7 @@ import {
   TitleColumn,
   Column
 } from './styles'
-import Avatar from 'components/Avatar'
+import { Avatar } from 'components/Avatar'
 import Button from 'components/Button'
 import AppContext from 'context/AppContext'
 
@@ -17,13 +17,22 @@ import MediaMatch from 'components/MediaMatch'
 import Card from 'components/Card'
 import PageHeader from 'components/PageHeader'
 
+export type PetProfile = {
+  id: string
+  Name: string
+  type: string
+  breed: string
+  genere: string
+  features: string
+}
+
 const GridRow = () => {
   const context = useContext(AppContext)
   const { profile } = context
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState<number | string>(0)
 
   const [searchTerm, setSearchTerm] = useState('')
-  const [searchResults, setSearchResults] = useState()
+  const [searchResults, setSearchResults] = useState<PetProfile[]>()
 
   useEffect(() => {
     const results = profile?.filter((item) =>
@@ -32,10 +41,10 @@ const GridRow = () => {
     setSearchResults(results)
   }, [profile, searchTerm])
 
-  function paginate(arr, size) {
+  function paginate(arr: PetProfile[], size: number) {
     return arr?.reduce((acc, val, i) => {
-      const idx = Math.floor(i / size)
-      const page = acc[idx] || (acc[idx] = [])
+      const idx: number = Math.floor(i / size)
+      const page: ProfilerProps[] = acc[idx] || (acc[idx] = [])
       page.push(val)
 
       return acc
@@ -44,12 +53,14 @@ const GridRow = () => {
 
   const pages = paginate(searchResults, 10)
 
-  const onClickPage = (e) => {
-    e.preventDefault()
+  interface DOMEvent<T extends EventTarget> extends Event {
+    target: T
+  }
+  const onClickPage = (e: DOMEvent<HTMLAnchorElement>) => {
     setCurrent(e.target.outerText - 1)
   }
 
-  const handleChange = (e) => {
+  const handleChange = (e: DOMEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value)
   }
 
@@ -61,7 +72,7 @@ const GridRow = () => {
         labelBadge={searchResults?.length}
       />
       <MediaMatch greaterThan="tablet">
-        <ContentGrid>
+        <ContentGrid data-testid="header-desktop">
           <Column />
           <TitleColumn> Name </TitleColumn>
           <TitleColumn>Type</TitleColumn>
@@ -93,9 +104,11 @@ const GridRow = () => {
         <MediaMatch lessThan="tablet">
           {pages?.[`${current}`]?.map((pet, i) => (
             <Card
+              data-testid="card-mobile"
               key={`pet-${i}`}
               idCard={`card-${i}`}
-              petImg={`https://picsum.photos/50?random=${i + 1}`}
+              imageAlt={pet.name}
+              imageSrc={`https://picsum.photos/50?random=${i + 1}`}
               petName={pet.Name ? pet.Name : 'no name'}
               petType={pet.Type?.Name}
               petBreed={pet.Breed?.Primary?.Name}
@@ -105,7 +118,7 @@ const GridRow = () => {
           ))}
         </MediaMatch>
       </ListContainer>
-      <PaginationContainer>
+      <PaginationContainer data-testid="pagination">
         {pages?.map((_, i) => {
           return (
             <Pagination
