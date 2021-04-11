@@ -21,7 +21,7 @@ This project uses:
 First, clone this repository and install the dependencies:
 
 ```bash
-https://github.com/virginiarcruz/shelter-buddy.git
+git clone https://github.com/virginiarcruz/shelter-buddy.git
 
 yarn
 ```
