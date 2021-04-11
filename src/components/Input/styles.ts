@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import { customMedia } from 'components/MediaMatch'
 
 export const InputContainer = styled.input`
   ${({ theme }) => css`
@@ -15,7 +15,7 @@ export const InputContainer = styled.input`
     color: ${theme.color.middleGray};
     line-height: 19px;
     width: 100%;
-    ${media.greaterThan('medium')`
+    ${customMedia.greaterThan('tablet')`
       width: 310px;
     `}
 

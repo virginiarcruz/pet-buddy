@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
+import { customMedia } from 'components/MediaMatch'
 
 export const Container = styled.header``
 
 export const LogoContent = styled.img`
   width: 206px;
   height: 32px;
-  ${media.greaterThan('medium')`
+  ${customMedia.greaterThan('tablet')`
     width: 283px;
     height: 44px;
   `}

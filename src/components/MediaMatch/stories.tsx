@@ -9,7 +9,7 @@ export default {
 export const Desktop: Story = () => <MediaMatch> Only desktop</MediaMatch>
 
 export const Mobile: Story = () => (
-  <MediaMatch lessThan="medium">Only on Mobile</MediaMatch>
+  <MediaMatch lessThan="tablet">Only on Mobile</MediaMatch>
 )
 
 Mobile.parameters = {

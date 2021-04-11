@@ -36,7 +36,7 @@ exports[`<IconButton /> should render the <IconButton /> 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="c0 icon-button"
   >
     <svg
       class="c1"

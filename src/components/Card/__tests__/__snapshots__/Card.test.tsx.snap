@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render the <Card /> 1`] = `
+.c0 {
+  background-color: #F8F8FC;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c1 {
+  display: none;
+}
+
+.c1:checked + label .icon-button {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c1:checked + label + .card-content {
+  max-height: 100vh;
+}
+
+.c1:checked + label::before {
+  -webkit-transform: rotate(90deg) translateX(-3px);
+  -ms-transform: rotate(90deg) translateX(-3px);
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.c7 {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .25s ease-in-out;
+  transition: max-height .25s ease-in-out;
+}
+
+.c7 p,
+.c7 span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: left;
+}
+
+.c7 p {
+  color: #707183;
+  margin-right: 9px;
+  margin-bottom: 16px;
+}
+
+.c7 p:first-child {
+  margin-top: 24px;
+}
+
+.c7 p:nth-child(4) {
+  margin-bottom: 24px;
+}
+
+.c7 p span {
+  color: #000121;
+}
+
+.c7 .card-inner button {
+  margin: 0 auto;
+}
+
+.c4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000121;
+  line-height: 19px;
+  margin-left: 20px;
+  text-align: left;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c3 {
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.c8 {
+  border: 0;
+  border-radius: 8px;
+  background-color: #002FD6;
+  color: #FFFFFF;
+  font-family: 'Inter',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  padding: 16px 99px;
+  max-width: 263px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  margin-left: 4px;
+  width: 7px;
+  height: 12px;
+}
+
+.c9 path {
+  fill: #FFFFFF;
+}
+
+.c5 {
+  border-radius: 100px;
+  background-color: #002FD6;
+  color: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c6 {
+  width: 7px;
+  height: 12px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c6 path {
+  fill: #FFFFFF;
+}
+
+@media (min-width:768px) {
+  .c3 {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+<section
+  class="c0 card-container"
+>
+  <input
+    class="c1"
+    name="header-card"
+    type="checkbox"
+  />
+  <label
+    class="c2"
+  >
+    <img
+      alt="alt img"
+      class="c3"
+    />
+    <h2
+      class="c4"
+    >
+       
+       
+    </h2>
+    <div
+      class="c5 icon-button"
+    >
+      <svg
+        class="c6"
+        viewBox="0 0 7 12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.821 6.454a.665.665 0 0 0 0-.908L1.687.186c-.264-.248-.661-.248-.9 0L.18.818c-.239.247-.239.66 0 .935l4.075 4.233L.18 10.247c-.239.275-.239.688 0 .935l.608.632c.239.248.636.248.9 0l5.134-5.36z"
+        />
+      </svg>
+    </div>
+  </label>
+  <div
+    class="c7 card-content"
+  >
+    <div
+      class="card-inner"
+    >
+      <p>
+        Type: 
+        <span />
+      </p>
+      <p>
+        Breed: 
+        <span />
+      </p>
+      <p>
+        Gender: 
+        <span />
+      </p>
+      <p>
+        Color: 
+        <span />
+      </p>
+      <button
+        class="c8"
+      >
+        <span>
+          Details
+        </span>
+        <svg
+          class="c9"
+          viewBox="0 0 7 12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.821 6.454a.665.665 0 0 0 0-.908L1.687.186c-.264-.248-.661-.248-.9 0L.18.818c-.239.247-.239.66 0 .935l4.075 4.233L.18 10.247c-.239.275-.239.688 0 .935l.608.632c.239.248.636.248.9 0l5.134-5.36z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+`;

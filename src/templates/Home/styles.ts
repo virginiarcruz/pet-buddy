@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import { customMedia } from 'components/MediaMatch'
 import { Grid } from 'components/Grid'
 
 export const Container = styled.main`
@@ -11,7 +11,7 @@ export const Container = styled.main`
     flex-direction: column;
     align-items: center;
     padding: 72px 16px 42px 16px;
-    ${media.greaterThan('medium')`
+    ${customMedia.greaterThan('tablet')`
       padding: 96px 156px 90px 156px;
     `}
   `}
@@ -24,7 +24,7 @@ export const Content = styled.section`
     border-radius: ${border.radius.medium};
     margin-top: 56px;
     padding: 32px 24px;
-    ${media.greaterThan('medium')`
+    ${customMedia.greaterThan('tablet')`
       padding: 40px 40px 32px 40px;
       margin-top: 96px;
     `}
@@ -33,7 +33,7 @@ export const Content = styled.section`
 
 export const ContentGrid = styled(Grid)`
   padding: 0 16px;
-  ${media.greaterThan('medium')`
+  ${customMedia.greaterThan('tablet')`
     margin-top: 56px;
   `}
 `

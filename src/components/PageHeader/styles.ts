@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { customMedia } from 'components/MediaMatch'
 
 export const Header = styled.header`
   margin-bottom: 32px;
   > input {
     margin-top: 32px;
   }
-  ${media.greaterThan('medium')`
+  ${customMedia.greaterThan('tablet')`
     display: flex;
     justify-content: space-between;
     align-items: center;

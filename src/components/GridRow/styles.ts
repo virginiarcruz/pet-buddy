@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Grid } from 'components/Grid'
-import media from 'styled-media-query'
+import { customMedia } from 'components/MediaMatch'
 
 export const ListContainer = styled.div`
   .card-container {
@@ -22,7 +22,7 @@ export const TitleColumn = styled.h2`
 
 export const ContentGrid = styled(Grid)`
   padding: 0 16px;
-  ${media.greaterThan('medium')`
+  ${customMedia.greaterThan('tablet')`
     margin-top: 56px;
   `}
 `
@@ -50,5 +50,8 @@ export const Row = styled(Grid)`
 export const PaginationContainer = styled.div`
   display: flex;
   margin-top: 32px;
-  overflow: hidden;
+  overflow: scroll;
+  ${customMedia.greaterThan('tablet')`
+    overflow: hidden;
+  `}
 `

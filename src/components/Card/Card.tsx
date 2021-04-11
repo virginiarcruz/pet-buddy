@@ -5,6 +5,7 @@ import Button from 'components/Button'
 import IconButton from 'components/IconButton'
 
 export type CardProps = {
+  petImg?: string
   petName?: string
   petType?: string
   petBreed?: string
@@ -14,6 +15,7 @@ export type CardProps = {
 }
 
 const Card = ({
+  petImg,
   petName,
   petType,
   petBreed,
@@ -25,7 +27,7 @@ const Card = ({
   <CardContainer className="card-container">
     <Input type="checkbox" id={idCard} name="header-card" {...props} />
     <Header htmlFor={idCard} {...props}>
-      <Avatar imageAlt="alt img" imageSrc="https://picsum.photos/50" />
+      <Avatar imageAlt="alt img" imageSrc={petImg} />
       <Name> {petName} </Name>
       <IconButton />
     </Header>

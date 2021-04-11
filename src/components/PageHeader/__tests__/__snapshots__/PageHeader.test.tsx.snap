@@ -32,14 +32,18 @@ exports[`<PageHeader /> should render the <PageHeader /> 1`] = `
 }
 
 .c4 {
-  padding: 12px;
+  padding: 12px 12px 12px 32px;
   background-color: #F4F4F7;
+  background-image: url('img/icon-search.svg');
+  background-repeat: no-repeat;
+  background-position: 12px 14px;
   border-radius: 12px;
   border: 0;
   font-size: 16px;
   font-family: 'Inter',-apple-system,sans-serif;
   color: #A1A2AF;
   line-height: 19px;
+  width: 100%;
 }
 
 .c4::-webkit-input-placeholder {
@@ -58,17 +62,21 @@ exports[`<PageHeader /> should render the <PageHeader /> 1`] = `
   color: #A1A2AF;
 }
 
+.c0 {
+  margin-bottom: 32px;
+}
+
 .c0 > input {
   margin-top: 32px;
 }
 
-@media (min-width:768px) {
+@media (min-width:992px) {
   .c4 {
     width: 310px;
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:992px) {
   .c0 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -82,6 +90,7 @@ exports[`<PageHeader /> should render the <PageHeader /> 1`] = `
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-bottom: 0;
   }
 
   .c0 > input {
@@ -102,14 +111,14 @@ exports[`<PageHeader /> should render the <PageHeader /> 1`] = `
     </h1>
     <span
       class="c3"
-    >
-      28
-    </span>
+    />
   </div>
   <input
     class="c4"
+    id="inputFilter"
     placeholder="Search an animal by name"
     type="text"
+    value=""
   />
 </header>
-`
+`;

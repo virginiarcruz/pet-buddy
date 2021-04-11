@@ -22,8 +22,6 @@ const GridRow = () => {
   const { profile } = context
   const [current, setCurrent] = useState(0)
 
-  console.log('profile', context.profile)
-
   const [searchTerm, setSearchTerm] = useState('')
   const [searchResults, setSearchResults] = useState()
 
@@ -60,9 +58,9 @@ const GridRow = () => {
       <PageHeader
         inputValue={searchTerm}
         onChange={handleChange}
-        labelBadge={profile?.length}
+        labelBadge={searchResults?.length}
       />
-      <MediaMatch greaterThan="medium">
+      <MediaMatch greaterThan="tablet">
         <ContentGrid>
           <Column />
           <TitleColumn> Name </TitleColumn>
@@ -74,7 +72,7 @@ const GridRow = () => {
         </ContentGrid>
       </MediaMatch>
       <ListContainer className="petsList">
-        <MediaMatch greaterThan="medium">
+        <MediaMatch greaterThan="tablet">
           {pages?.[`${current}`]?.map((pet, i) => (
             <Row key={`pet-${i}`}>
               <Avatar
@@ -92,11 +90,12 @@ const GridRow = () => {
             </Row>
           ))}
         </MediaMatch>
-        <MediaMatch lessThan="medium">
+        <MediaMatch lessThan="tablet">
           {pages?.[`${current}`]?.map((pet, i) => (
             <Card
               key={`pet-${i}`}
               idCard={`card-${i}`}
+              petImg={`https://picsum.photos/50?random=${i + 1}`}
               petName={pet.Name ? pet.Name : 'no name'}
               petType={pet.Type?.Name}
               petBreed={pet.Breed?.Primary?.Name}
