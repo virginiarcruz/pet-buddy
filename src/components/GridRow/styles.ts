@@ -50,7 +50,7 @@ export const Row = styled(Grid)`
 export const PaginationContainer = styled.div`
   display: flex;
   margin-top: 32px;
-  overflow: scroll;
+  overflow-x: scroll;
   ${customMedia.greaterThan('tablet')`
     overflow: hidden;
   `}

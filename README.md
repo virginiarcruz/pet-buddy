@@ -1,9 +1,9 @@
 
-
+# Shelter Buddy Projetc
 
 ## What is inside?
 
-This project uses lot of stuff as:
+This project uses:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
@@ -14,6 +14,7 @@ This project uses lot of stuff as:
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
+
 
 ## Getting Started
 

@@ -37,7 +37,7 @@ exports[`<GridRow /> should render the content 1`] = `
   display: -ms-flexbox;
   display: flex;
   margin-top: 32px;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
 .c3 {
