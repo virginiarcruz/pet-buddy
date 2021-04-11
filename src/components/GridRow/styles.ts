@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Grid } from 'components/Grid'
+import media from 'styled-media-query'
 
 export const ListContainer = styled.div`
   .card-container {
@@ -8,6 +9,25 @@ export const ListContainer = styled.div`
     }
   }
 `
+export const TitleColumn = styled.h2`
+  ${({ theme }) => css`
+    font-size: ${theme.font.size.medium};
+    font-weight: ${theme.font.medium};
+    color: ${theme.color.darkGray};
+    line-height: 19px;
+    padding-bottom: 24px;
+    text-align: left;
+  `}
+`
+
+export const ContentGrid = styled(Grid)`
+  padding: 0 16px;
+  ${media.greaterThan('medium')`
+    margin-top: 56px;
+  `}
+`
+
+export const Column = styled.div``
 
 export const Row = styled(Grid)`
   ${({ theme }) => css`
@@ -30,4 +50,5 @@ export const Row = styled(Grid)`
 export const PaginationContainer = styled.div`
   display: flex;
   margin-top: 32px;
+  overflow: hidden;
 `

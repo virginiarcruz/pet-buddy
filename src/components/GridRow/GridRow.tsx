@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { Row, PaginationContainer, ListContainer } from './styles'
+import {
+  Row,
+  PaginationContainer,
+  ListContainer,
+  ContentGrid,
+  TitleColumn,
+  Column
+} from './styles'
 import Avatar from 'components/Avatar'
 import Button from 'components/Button'
 import AppContext from 'context/AppContext'
@@ -55,11 +62,25 @@ const GridRow = () => {
         onChange={handleChange}
         labelBadge={profile?.length}
       />
+      <MediaMatch greaterThan="medium">
+        <ContentGrid>
+          <Column />
+          <TitleColumn> Name </TitleColumn>
+          <TitleColumn>Type</TitleColumn>
+          <TitleColumn> Breed </TitleColumn>
+          <TitleColumn> Gender </TitleColumn>
+          <TitleColumn> Color </TitleColumn>
+          <Column />
+        </ContentGrid>
+      </MediaMatch>
       <ListContainer className="petsList">
         <MediaMatch greaterThan="medium">
           {pages?.[`${current}`]?.map((pet, i) => (
             <Row key={`pet-${i}`}>
-              <Avatar imageAlt={pet.name} imageSrc="https://picsum.photos/50" />
+              <Avatar
+                imageAlt={pet.name}
+                imageSrc={`https://picsum.photos/50?random=${i + 1}`}
+              />
               <p> {pet.Name ? pet.Name : 'no name'} </p>
               <p> {pet.Type?.Name} </p>
               <p> {pet.Breed?.Primary?.Name} </p>

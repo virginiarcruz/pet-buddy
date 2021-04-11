@@ -7,7 +7,7 @@ export const Grid = styled.div`
 
   ${media.greaterThan('medium')`
       display: grid;
-      grid-template-columns: 70px 1fr 1fr 1.5fr 1fr 1.5fr 65px;
+      grid-template-columns: 70px 1fr 1fr 1.8fr 0.8fr 1.5fr 65px;
       grid-gap: 10px;
   `}
 `
