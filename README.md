@@ -18,7 +18,14 @@ This project uses:
 
 ## Getting Started
 
-First, run the development server:
+First, clone this repository and install the dependencies:
+
+```bash
+https://github.com/virginiarcruz/shelter-buddy.git
+
+yarn
+```
+So, run the development server:
 
 ```bash
 yarn dev
