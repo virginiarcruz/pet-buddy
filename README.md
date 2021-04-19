@@ -1,5 +1,5 @@
 
-# Shelter Buddy Projetc
+# Pet Buddy Project
 
 ## What is inside?
 
